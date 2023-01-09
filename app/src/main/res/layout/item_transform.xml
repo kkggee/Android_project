@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 글 제목 -->
+        <TextView
+            android:id="@+id/text_view_item_transform"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="17dp"
+            android:fontFamily="@font/applesdgothicneosb"
+            tools:text="# x번 째 글" />
+
+        <!-- 모임 일시 -->
+        <TextView
+            android:id="@+id/post_day"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:fontFamily="@font/applegothicneor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20xx.xx.xx ~ 20xx.xx.xx" />
+
+    </LinearLayout>
+
+    <!-- 태그 -->
+    <TextView
+        android:id="@+id/post_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="태그 태그 태그 태그" />
+
+
+    <!-- 글 내용 -->
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/applegothicneor"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="글 내용 글 내용 글 내용 " />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#aaa" />
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:theme="@style/Theme.Material3.Light.NoActionBar"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/post_title"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/applesdgothicneosb"
+                    android:text="제목"/>
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/applegothicneor"
+                    android:padding="16dp"
+                    android:text="제목입니다." />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="15dp"
+                    android:id="@+id/post_date"
+                    android:text="작성일"/>
+
+                <TextView
+                    android:id="@+id/date_tv"
+                    android:padding="16dp"
+                    android:background="#eeeeee"
+                    android:textSize="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="제목입니다."
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/tagLayout"
+                android:layout_margin="3dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:id="@+id/post_script"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/applesdgothicneosb"
+                    android:text="태그"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/content_tv"
+                android:padding="16dp"
+                android:background="@drawable/round"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/applegothicneor"
+                android:text="내용입니다."
+                />
+
+            <TextView
+                android:padding="16dp"
+                android:id="@+id/post_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/applesdgothicneosb"
+                android:text="댓글"
+                android:textSize="15dp"
+                />
+            <LinearLayout
+                android:id="@+id/comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical"/>
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reply_list"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/applegothicneor"
+            android:hint="댓글 내용을 입력하세요"/>
+        <Button
+            android:id="@+id/reg_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:backgroundTint="#E893BF"
+            android:fontFamily="@font/applesdgothicneosb"
+            android:text="등록하기"/>
+    </LinearLayout>
+</LinearLayout>
+
